@@ -3,45 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/1.0.0/css/font-awesome.css" integrity="sha512-YX9NLok9RLg+o5JkA2Whp1kPDCBCEUolTyYykJVOe1xcaTNebXU/x02TxV0LpVYqVNJV5NVjyoMW0jHnJWICKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>NSGO - Your Technology Partner</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: 'Roboto', sans-serif;
             background-color: #000000;
             color: #FFFFFF;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
+            padding: 10px 20px;
             background-color: #023399;
             z-index: 1;
             top: 0;
             position: fixed;
             width: 100%;
         }
+
         header a {
             color: #FFFFFF;
             text-decoration: none;
             margin: 0 15px;
         }
+
+        header a:hover {
+            color: #ffcc00;
+        }
+
         .banner {
             text-align: center;
-            background-image: url(https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg?rev=025a044…);
+            background-image: url('https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg');
             background-size: cover;
             background-position: center;
             color: #FFFFFF;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
         .banner h1 {
             font-size: 48px;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            padding: 0.67em 0;
+            margin-bottom: 20px;
         }
+
         .banner button {
             background-color: #023399;
             color: #FFFFFF;
@@ -49,27 +69,100 @@
             border: none;
             cursor: pointer;
             font-size: 18px;
+            border-radius: 5px;
         }
-        .services, .about, .reviews, .news {
+
+        .banner button:hover {
+            background-color: #ffcc00;
+        }
+
+        section {
             padding: 50px 20px;
             text-align: center;
         }
-        footer {
-            padding: 20px;
-            background-color: #023399;
-            text-align: center;
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #FFCC00;
         }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 40px 20px;
+            background-color: #023399;
+            color: #FFFFFF;
+        }
+        .top-footer{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: justify;
+   	 		margin-bottom: 12px;
+        }
+        
+        .last-footer{
+            display: flex;
+            justify-content: center;
+   	 		margin-bottom: 12px;
+   	 		padding-top: 12px;
+        }
+        
+        .last-footer-2{
+            display: flex;
+            justify-content: left;
+   	 		padding-top: 12px;
+    		border-top: 1px solid #FFCC00;
+        }
+
+        footer .quick-links,
+        footer .contact-info,
+        footer .social-media {
+    		display: grid;
+        }
+        footer .social-media {
+    		display: inline;
+        }
+
         footer a {
             color: #FFFFFF;
             text-decoration: none;
             margin: 0 10px;
+            font-size: 16px;
+            transition: color 0.5s;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        footer .social-media a:hover {
+            color: #ffcc00;
+        }
+
+        footer .social-media a i {
+            font-size: 24px;
+        }
+        p.head-text{
+        	color: #FFCC00;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="https://i.ibb.co/B4cR6kD/9251-AF69-5-A74-441-F-AA87-9717-C04-B117-F.png" height="30px"></a>
+            <a href="#"><img src="https://i.ibb.co/B4cR6kD/9251-AF69-5-A74-441-F-AA87-9717-C04-B117-F.png" alt="Logo" height="30"></a>
         </div>
         <nav>
             <a href="#">Home</a>
@@ -79,50 +172,65 @@
             <a href="#">Contact Us</a>
         </nav>
     </header>
+
     <div class="banner">
         <h1>Welcome to NSGO - Your Technology Partner</h1>
         <button>Learn More</button>
     </div>
-    <div class="services">
+
+    <section class="services">
         <h2>Our Services</h2>
-        <p>Service 1</p>
-        <p>Service 2</p>
-        <p>Service 3</p>
-        <p>Service 4</p>
-    </div>
-    <div class="news">
+        <p>We offer comprehensive solutions tailored to your needs.</p>
+        <p>From consulting to implementation, we deliver excellence.</p>
+    </section>
+
+    <section class="news">
         <h2>Latest News</h2>
-        <p>News item 1</p>
-        <p>News item 2</p>
-        <p>News item 3</p>
-    </div>
-    <div class="about">
+        <p>Stay updated with the latest advancements in technology.</p>
+    </section>
+
+    <section class="about">
         <h2>About Us</h2>
-        <p>Information about NSGO, mission, and vision.</p>
-    </div>
-    <div class="reviews">
+        <p>NSGO is committed to empowering businesses with innovative tech solutions.</p>
+    </section>
+
+    <section class="reviews">
         <h2>Customer Reviews</h2>
-        <p>Review 1</p>
-        <p>Review 2</p>
-        <p>Review 3</p>
-    </div>
+        <p>"NSGO transformed our operations!"</p>
+        <p>"Outstanding support and service quality."</p>
+    </section>
+
     <footer>
-        <div class="quick-links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">News</a>
-            <a href="#">Contact Us</a>
+    	<div class="top-footer">
+    		<img src="https://i.ibb.co/B4cR6kD/9251-AF69-5-A74-441-F-AA87-9717-C04-B117-F.png" width="20%">
+          <div class="quick-links">
+              <p class="head-text"><i class="fa-solid fa-circle-info"></i> <b>เกี่ยวกับเรา</b></p>
+              <a href="#">วิสัยทัศน์และพันธกิจ</a>
+              <a href="#">ผังองค์กร</a>
+              <a href="#">คณะกรรมการ</a>
+              <a href="#">รายงานประจำปี</a>
+          </div>
+          <div class="quick-links">
+              <p class="head-text"><i class="fa-solid fa-circle-info"></i> <b>บริการ</b></p>
+              <a href="#">สมัครสมาชิก</a>
+              <a href="#">เข้าสู่ะบบ</a>
+              <a href="#">สำนักเลขาธิการ</a>
+          </div>
         </div>
-        <div class="contact-info">
-            <p>Address: 123 NSGO St, Tech City</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: info@nsgo.com</p>
+    	<div class="last-footer">
+          <div class="social-media">
+              <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+    	<div class="last-footer-2">
+          <div>
+            <div>
+              <p>Copyright © 2024
+              <script>new Date().getFullYear()>2024&&document.write("- "+new Date().getFullYear());</script> All right reserved.</p>
+            </div>
+            </div>
         </div>
     </footer>
 </body>
